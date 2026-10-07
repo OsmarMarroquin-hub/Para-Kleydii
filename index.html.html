@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Kleydi ❤️</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    overflow-x:hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,120,170,.25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(180,80,255,.20), transparent 30%),
+        linear-gradient(135deg,#160b20,#32132e,#140c24);
+    color:white;
+}
+
+/* =========================
+   FONDO ANIMADO
+========================= */
+
+.background-hearts span{
+    position:fixed;
+    bottom:-50px;
+    font-size:25px;
+    animation: subir 9s linear infinite;
+    opacity:.7;
+    pointer-events:none;
+    z-index:0;
+}
+
+.background-hearts span:nth-child(1){left:5%;animation-delay:0s}
+.background-hearts span:nth-child(2){left:15%;animation-delay:2s}
+.background-hearts span:nth-child(3){left:28%;animation-delay:4s}
+.background-hearts span:nth-child(4){left:42%;animation-delay:1s}
+.background-hearts span:nth-child(5){left:58%;animation-delay:5s}
+.background-hearts span:nth-child(6){left:70%;animation-delay:3s}
+.background-hearts span:nth-child(7){left:82%;animation-delay:6s}
+.background-hearts span:nth-child(8){left:94%;animation-delay:2.5s}
+
+@keyframes subir{
+    0%{
+        transform:translateY(0) scale(.7) rotate(0);
+        opacity:0;
+    }
+    15%{opacity:.8;}
+    100%{
+        transform:translateY(-110vh) scale(1.5) rotate(30deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   PANTALLAS
+========================= */
+
+.pantalla{
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:30px 15px;
+    position:relative;
+    z-index:2;
+}
+
+.pantalla.activa{
+    display:flex;
+    animation: aparecer .8s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:scale(.94) translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+.contenedor{
+    width:min(900px,95%);
+    text-align:center;
+}
+
+.card{
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-radius:35px;
+    padding:45px 30px;
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.45),
+        inset 0 1px rgba(255,255,255,.15);
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+h1{
+    font-size:clamp(2.5rem,7vw,5rem);
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#fff,#ff9fc5,#fff);
+    background-size:200%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation: brillo 3s linear infinite;
+}
+
+@keyframes brillo{
+    to{background-position:200% center;}
+}
+
+h2{
+    font-size:clamp(2rem,5vw,3.5rem);
+    margin-bottom:20px;
+}
+
+h3{
+    font-size:1.7rem;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:1.15rem;
+    line-height:1.8;
+    color:#ffeaf4;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn{
+    border:none;
+    padding:16px 28px;
+    margin:10px;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(135deg,#ff3f88,#9d3cff);
+    box-shadow:0 10px 30px rgba(255,63,136,.35);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.04);
+    box-shadow:0 15px 40px rgba(255,63,136,.55);
+}
+
+.btn:active{
+    transform:scale(.95);
+}
+
+/* =========================
+   INICIO
+========================= */
+
+.corazon-grande{
+    font-size:90px;
+    animation:latido 1.2s infinite;
+    margin-bottom:15px;
+}
+
+@keyframes latido{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.18)}
+}
+
+.subtitulo{
+    margin-bottom:25px;
+}
+
+/* =========================
+   CARTA
+========================= */
+
+.carta{
+    text-align:left;
+    background:rgba(255,255,255,.06);
+    padding:30px;
+    border-radius:25px;
+    border-left:4px solid #ff6fa8;
+    margin:25px 0;
+}
+
+.carta p{
+    margin-bottom:15px;
+}
+
+.destacado{
+    color:#ff9fc5;
+    font-weight:bold;
+}
+
+.bebe{
+    display:inline-block;
+    font-size:1.5em;
+    animation:brinco 1.5s infinite;
+}
+
+@keyframes brinco{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+}
+
+/* =========================
+   CHIHUAHUA
+========================= */
+
+.perrito-area{
+    margin:25px auto 10px;
+    width:260px;
+    height:260px;
+    position:relative;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.perrito-area:hover{
+    transform:scale(1.06);
+}
+
+.perrito{
+    position:absolute;
+    width:155px;
+    height:125px;
+    background:#fff;
+    border-radius:48% 52% 45% 45%;
+    left:52px;
+    top:75px;
+    border:4px solid #3a2530;
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+/* cabeza */
+.cabeza{
+    position:absolute;
+    width:125px;
+    height:120px;
+    background:#fff;
+    border:4px solid #3a2530;
+    border-radius:50%;
+    left:15px;
+    top:-65px;
+    z-index:4;
+}
+
+/* orejas cafés */
+.oreja{
+    position:absolute;
+    width:48px;
+    height:75px;
+    background:#9a5a35;
+    border:4px solid #3a2530;
+    z-index:3;
+}
+
+.oreja.izq{
+    left:-22px;
+    top:-15px;
+    transform:rotate(-25deg);
+    border-radius:60% 30% 50% 40%;
+}
+
+.oreja.der{
+    right:-22px;
+    top:-15px;
+    transform:rotate(25deg);
+    border-radius:30% 60% 40% 50%;
+}
+
+/* mancha alrededor del ojo */
+.mancha{
+    position:absolute;
+    width:55px;
+    height:48px;
+    background:#9a5a35;
+    border-radius:50%;
+    top:8px;
+    right:5px;
+    z-index:5;
+    transform:rotate(-15deg);
+}
+
+/* ojos */
+.ojo{
+    position:absolute;
+    width:13px;
+    height:13px;
+    background:#181018;
+    border-radius:50%;
+    top:35px;
+    z-index:7;
+}
+
+.ojo.izq{left:28px}
+.ojo.der{right:30px}
+
+.brillito{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    top:37px;
+    z-index:8;
+}
+
+.brillito.i{left:31px}
+.brillito.d{right:33px}
+
+/* hocico */
+.hocico{
+    position:absolute;
+    width:38px;
+    height:28px;
+    background:#fff;
+    border:3px solid #3a2530;
+    border-radius:50%;
+    left:41px;
+    top:58px;
+    z-index:8;
+}
+
+.nariz{
+    position:absolute;
+    width:14px;
+    height:10px;
+    background:#211820;
+    border-radius:50%;
+    left:9px;
+    top:3px;
+}
+
+.boca{
+    position:absolute;
+    width:18px;
+    height:10px;
+    border-bottom:3px solid #3a2530;
+    border-radius:50%;
+    left:8px;
+    top:12px;
+}
+
+/* cuerpo */
+.pecho{
+    position:absolute;
+    width:65px;
+    height:70px;
+    background:#fff;
+    border-radius:50%;
+    left:45px;
+    top:20px;
+}
+
+/* mancha del cuerpo */
+.mancha-cuerpo{
+    position:absolute;
+    width:65px;
+    height:45px;
+    background:#9a5a35;
+    border-radius:50%;
+    right:10px;
+    top:35px;
+    transform:rotate(-20deg);
+}
+
+/* patas */
+.pata{
+    position:absolute;
+    width:27px;
+    height:55px;
+    background:#fff;
+    border:4px solid #3a2530;
+    border-radius:20px;
+    bottom:-35px;
+}
+
+.pata.p1{left:25px}
+.pata.p2{left:65px}
+.pata.p3{right:45px}
+
+/* cola */
+.cola{
+    position:absolute;
+    width:65px;
+    height:25px;
+    border:8px solid #fff;
+    border-left:0;
+    border-radius:0 50px 50px 0;
+    right:-48px;
+    top:20px;
+    transform:rotate(-25deg);
+    animation:cola 1s infinite alternate;
+}
+
+@keyframes cola{
+    from{transform:rotate(-30deg)}
+    to{transform:rotate(20deg)}
+}
+
+/* animación del perro */
+.perrito-area:active .perrito{
+    animation:saltar .5s;
+}
+
+@keyframes saltar{
+    50%{transform:translateY(-35px) rotate(-5deg)}
+}
+
+/* =========================
+   JUEGO
+========================= */
+
+.numero{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff4c91,#7f3cff);
+    font-weight:bold;
+    font-size:1.4rem;
+    margin-bottom:15px;
+}
+
+.pregunta{
+    font-size:1.6rem;
+    font-weight:bold;
+    margin:20px auto 30px;
+    max-width:750px;
+    line-height:1.5;
+}
+
+.opciones{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    max-width:700px;
+    margin:auto;
+}
+
+.opcion{
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.09);
+    color:white;
+    padding:18px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.opcion:hover{
+    background:rgba(255,105,160,.25);
+    transform:translateY(-4px);
+    border-color:#ff7eaf;
+}
+
+/* =========================
+   RESULTADO
+========================= */
+
+.resultado{
+    margin-top:25px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    display:none;
+    animation:aparecer .5s;
+}
+
+.correcto{
+    color:#9dffcf;
+    font-size:1.35rem;
+    font-weight:bold;
+}
+
+.incorrecto{
+    color:#ff9ebd;
+    font-size:1.35rem;
+    font-weight:bold;
+}
+
+.penitencia{
+    margin-top:15px;
+    color:#ffd0e1;
+    font-size:1.15rem;
+}
+
+/* =========================
+   CONTABILIDAD
+========================= */
+
+.contabilidad-iconos{
+    font-size:55px;
+    margin-bottom:15px;
+    animation:flotar 2s infinite;
+}
+
+@keyframes flotar{
+    50%{transform:translateY(-10px)}
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-corazones{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.mensaje-final{
+    font-size:1.25rem;
+    line-height:2;
+    margin:25px auto;
+    max-width:750px;
+}
+
+.firma{
+    font-size:1.8rem;
+    color:#ff9fc5;
+    font-weight:bold;
+    margin-top:30px;
+}
+
+.lluvia{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:100;
+}
+
+.lluvia span{
+    position:absolute;
+    top:-50px;
+    animation:caer 5s linear forwards;
+}
+
+@keyframes caer{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+@media(max-width:600px){
+    .card{
+        padding:30px 18px;
+    }
+
+    .opciones{
+        grid-template-columns:1fr;
+    }
+
+    .pregunta{
+        font-size:1.3rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CORAZONES DE FONDO -->
+<div class="background-hearts">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💖</span>
+    <span>💘</span>
+    <span>❤️</span>
+    <span>💞</span>
+    <span>💓</span>
+</div>
+
+
+<!-- =========================
+     PANTALLA 1
+========================= -->
+
+<section id="inicio" class="pantalla activa">
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div class="corazon-grande">❤️</div>
+
+            <h1>Para Kleydi 💕</h1>
+
+            <p class="subtitulo">
+                Tengo algo preparado especialmente para ti... 🥹💗
+            </p>
+
+            <p>
+                No es una carta normal... 👀<br>
+                No es un juego normal... 😏<br>
+                Y definitivamente no es algo que puedas terminar sin sonreír. ❤️
+            </p>
+
+            <br>
+
+            <button class="btn" onclick="mostrar('carta')">
+                Dale clic aquí 💕✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CARTA
+========================= -->
+
+<section id="carta" class="pantalla">
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div class="corazon-grande">💗</div>
+
+            <h2>Para la mujer que amo ❤️</h2>
+
+            <div class="carta">
+
+                <p>
+                    Kleydi, quiero que sepas que eres una persona
+                    demasiado especial para mí. ❤️
+                </p>
+
+                <p>
+                    A veces siento que las palabras no son suficientes
+                    para explicar todo lo que siento por ti. 🥹
+                </p>
+
+                <p>
+                    Pero si pudiera pedir un solo deseo por cada vela
+                    de mi pastel de cumpleaños... 🎂🕯️
+                </p>
+
+                <p class="destacado">
+                    Usaría cada una de las velas de mi pastel de cumpleaños
+                    para desear una vida junto a ti y junto a mi bebé
+                    Brandon Gael. 👶💙❤️
+                </p>
+
+                <p>
+                    Quiero compartir contigo momentos bonitos,
+                    momentos difíciles, risas, sueños, comidas,
+                    desvelos, tareas, aventuras y todos esos pequeños
+                    momentos que hacen que la vida valga la pena. 🥰
+                </p>
+
+                <p>
+                    Porque al final, no quiero solamente momentos contigo...
+                    <strong>quiero una vida contigo.</strong> ❤️
+                </p>
+
+            </div>
+
+            <div class="bebe">👶💙</div>
+
+            <br>
+
+            <button class="btn" onclick="mostrar('chihuahua')">
+                Tengo otra sorpresa para ti... 🥹✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHIHUAHUA / BEBÉ
+========================= -->
+
+<section id="chihuahua" class="pantalla">
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div style="font-size:55px;">🐶🤍🤎</div>
+
+            <h2>Pero espera... 👀</h2>
+
+            <p>
+                Hay alguien que también quiere jugar contigo. 🥹
+            </p>
+
+            <p>
+                Y como es parte de esta pequeña aventura...
+            </p>
+
+            <!-- PERRITO -->
+            <div class="perrito-area" onclick="mostrar('juegoIntro')">
+
+                <div class="perrito">
+
+                    <div class="cabeza">
+
+                        <div class="oreja izq"></div>
+                        <div class="oreja der"></div>
+
+                        <div class="mancha"></div>
+
+                        <div class="ojo izq"></div>
+                        <div class="ojo der"></div>
+
+                        <div class="brillito i"></div>
+                        <div class="brillito d"></div>
+
+                        <div class="hocico">
+                            <div class="nariz"></div>
+                            <div class="boca"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="pecho"></div>
+                    <div class="mancha-cuerpo"></div>
+
+                    <div class="pata p1"></div>
+                    <div class="pata p2"></div>
+                    <div class="pata p3"></div>
+
+                    <div class="cola"></div>
+
+                </div>
+
+            </div>
+
+            <h3>🐶🤍🤎 Haz clic en el bebé 👶</h3>
+
+            <p>
+                Sí... en ese pequeño travieso. 😂❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO JUEGO
+========================= -->
+
+<section id="juegoIntro" class="pantalla">
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div style="font-size:70px;">🎮❤️‍🔥😈</div>
+
+            <h1>¡Vamos a jugar!</h1>
+
+            <p>
+                Ahora sí, amor... 😏
+            </p>
+
+            <br>
+
+            <p style="font-size:1.35rem;">
+                Te haré unas preguntas sobre
+                <strong>nosotros</strong>... ❤️
+            </p>
+
+            <br>
+
+            <p>
+                Si respondes correctamente... 🎉<br>
+                recibirás mucho amor. ❤️😘
+            </p>
+
+            <br>
+
+            <p style="font-size:1.4rem;color:#ff9fc5;">
+                Pero si pierdes... 😈
+            </p>
+
+            <p style="font-size:1.5rem;font-weight:bold;">
+                ¡HAY PENITENCIA! 😏💋🔥
+            </p>
+
+            <br>
+
+            <button class="btn" onclick="iniciarJuego()">
+                Acepto el reto 😈❤️
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUIZ
+========================= -->
+
+<section id="quiz" class="pantalla">
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div class="numero" id="numero">1</div>
+
+            <h2 id="tipoPregunta">Sobre nosotros ❤️</h2>
+
+            <div class="pregunta" id="pregunta"></div>
+
+            <div class="opciones" id="opciones"></div>
+
+            <div class="resultado" id="resultado"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTABILIDAD
+========================= -->
+
+<section id="contadora" class="pantalla">
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div class="contabilidad-iconos">
+                📚🧮💰📊
+            </div>
+
+            <h1>
+                ¡Ahora sí...! 😏
+            </h1>
+
+            <h2>
+                A ver lo contadora 📚🧮
+            </h2>
+
+            <p>
+                Ya sobreviviste a las preguntas sobre nosotros... 😂❤️
+            </p>
+
+            <br>
+
+            <p>
+                Pero ahora viene algo un poquito más difícil... 👀
+            </p>
+
+            <p style="font-size:1.4rem;">
+                <strong>
+                    ¡DEMUESTRA QUE SABES DE CONTABILIDAD! 😈📊
+                </strong>
+            </p>
+
+            <br>
+
+            <button class="btn" onclick="iniciarContabilidad()">
+                ¡Acepto el reto contable! 🧮🔥
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section id="final" class="pantalla">
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <div class="final-corazones">
+                ❤️💖💕💗💞
+            </div>
+
+            <h1>
+                ¡Llegaste hasta el final! 🥹❤️
+            </h1>
+
+            <div class="mensaje-final">
+
+                <p>
+                    Si llegaste hasta aquí, quiero que recuerdes algo... ❤️
+                </p>
+
+                <br>
+
+                <p>
+                    No importa cuántas preguntas hayas acertado,
+                    ni cuántas penitencias hayas acumulado... 😏😂
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>
+                        Lo importante es que quiero seguir compartiendo
+                        mi vida contigo.
+                    </strong> 🥹❤️
+                </p>
+
+                <br>
+
+                <p>
+                    Quiero seguir comiendo contigo 🍕,
+                    durmiendo contigo 😴,
+                    riéndome contigo 😂,
+                    haciendo tareas contigo 📚,
+                    viviendo aventuras contigo 🌎
+                    y construyendo nuestra historia juntos. ❤️
+                </p>
+
+                <br>
+
+                <p>
+                    Y algún día poder mirar atrás y decir:
+                </p>
+
+                <br>
+
+                <p style="font-size:1.5rem;color:#ff9fc5;">
+                    <strong>
+                        "Valió la pena cada momento porque
+                        terminamos construyendo una vida juntos." 🥹❤️
+                    </strong>
+                </p>
+
+                <br>
+
+                <p style="font-size:1.5rem;">
+                    Tú, yo y nuestro pequeño
+                    <strong>Brandon Gael</strong>. 👩‍❤️‍👨👶💙
+                </p>
+
+                <div class="firma">
+                    Te amo, Kleydi. ❤️
+                </div>
+
+                <br>
+
+                <p>
+                    Muchísimo más de lo que estas palabras pueden explicar. 🥹💕
+                </p>
+
+            </div>
+
+            <button class="btn" onclick="lluviaCorazones()">
+                Te amo ❤️✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="lluvia" id="lluvia"></div>
+
+
+<script>
+
+/* =====================================================
+   CAMBIO DE PANTALLAS
+===================================================== */
+
+function mostrar(id){
+
+    document.querySelectorAll(".pantalla").forEach(p => {
+        p.classList.remove("activa");
+    });
+
+    document.getElementById(id).classList.add("activa");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+
+/* =====================================================
+   PREGUNTAS SOBRE NOSOTROS
+===================================================== */
+
+const preguntasNosotros = [
+
+    {
+        pregunta:"📍 ¿Dónde nos conocimos?",
+        opciones:[
+            "En el Parque Erick Barrondo ❤️",
+            "En un restaurante 🍕",
+            "En el colegio 📚",
+            "En un centro comercial 🛍️"
+        ],
+        correcta:0,
+        penitencia:"Me debes dos besos 😘😘"
+    },
+
+    {
+        pregunta:"💋 ¿Quién dio nuestro primer beso?",
+        opciones:[
+            "Yo 😏❤️",
+            "Tú 🥰",
+            "Fue Brandon 😂👶",
+            "Nadie todavía 😳"
+        ],
+        correcta:0,
+        penitencia:"Me debes tres besitos 😘😘😘"
+    },
+
+    {
+        pregunta:"❤️ ¿Quién dijo primero 'te amo'?",
+        opciones:[
+            "Yo ❤️",
+            "Tú u Osmar 🥰",
+            "Los dos al mismo tiempo 😂",
+            "Nunca lo dijimos 😳"
+        ],
+        correcta:1,
+        penitencia:"Me debes un beso apasionado 💋❤️"
+    },
+
+    {
+        pregunta:"🏠 ¿Cuál de nuestras casas fue uno de los lugares donde pasamos tiempo juntos?",
+        opciones:[
+            "Mi casa 🏠",
+            "La casa de un amigo 😂",
+            "Un hotel 🏨",
+            "La casa de Brandon 👶"
+        ],
+        correcta:0,
+        penitencia:"Me debes un abrazo de 30 segundos 🫂❤️"
+    },
+
+    {
+        pregunta:"😈🔥 PREGUNTA TRAMPA: ¿Cuál es la respuesta correcta a esta pregunta?",
+        opciones:[
+            "Esta opción 😌",
+            "La opción B 😂",
+            "Ninguna de las anteriores 😈",
+            "La respuesta correcta es A 😏"
+        ],
+        correcta:2,
+        penitencia:"❤️‍🔥 PENITENCIA: Me debes una noche apasionada. 😏🔥"
+    },
+
+    {
+        pregunta:"😂❤️ ¿Qué cosas nos gusta hacer juntos?",
+        opciones:[
+            "Comer, dormir, reír y hacer tarea 🍕😴😂📚",
+            "Solo estudiar 📚",
+            "Solo dormir 😴",
+            "Solo jugar videojuegos 🎮"
+        ],
+        correcta:0,
+        penitencia:"Me debes una lluvia de besos 😘💋"
+    },
+
+    {
+        pregunta:"🥰 ¿Qué apodo o apodos te digo más?",
+        opciones:[
+            "Gorda o amor ❤️",
+            "Princesa espacial 🚀",
+            "Contadora loca 🧮😂",
+            "Jefa suprema 👑"
+        ],
+        correcta:0,
+        penitencia:"Me debes una cita romántica 🌹🥰"
+    },
+
+    {
+        pregunta:"📅❤️ ¿Qué fecha es importante para nosotros?",
+        opciones:[
+            "11/01/26 ❤️",
+            "25/12/25 🎄",
+            "14/02/26 💕",
+            "Cuando nazca nuestro bebé 👶"
+        ],
+        correcta:0,
+        penitencia:"Me debes decir 'te amo' cinco veces ❤️"
+    },
+
+    {
+        pregunta:"👶💙 ¿Cómo se llamará nuestro bebé?",
+        opciones:[
+            "Brandon Gael 👶💙",
+            "Daniel ❤️",
+            "Mateo 🥰",
+            "Osmar Jr. 😂"
+        ],
+        correcta:0,
+        penitencia:"Me debes un abrazo familiar 🫂❤️"
+    },
+
+    {
+        pregunta:"🥹❤️ ¿Qué es lo que más deseo para nuestro futuro juntos?",
+        opciones:[
+            "Una vida juntos ❤️👩‍❤️‍👨",
+            "Viajar solo 😂✈️",
+            "Tener un restaurante 🍕",
+            "Ser famosos 🌟"
+        ],
+        correcta:0,
+        penitencia:"Me debes una noche romántica ❤️‍🔥🌹"
+    }
+
+];
+
+
+/* =====================================================
+   PREGUNTAS DE CONTABILIDAD
+===================================================== */
+
+const preguntasContabilidad = [
+
+    {
+        pregunta:"📊 ¿Qué es un activo en contabilidad?",
+        opciones:[
+            "Un recurso que posee la empresa 💰",
+            "Una deuda de la empresa ❌",
+            "Un gasto personal",
+            "Un impuesto"
+        ],
+        correcta:0,
+        penitencia:"Me debes dos besos de contadora 😘😘"
+    },
+
+    {
+        pregunta:"🧮 ¿Cuál es la ecuación contable básica?",
+        opciones:[
+            "Activo = Pasivo + Capital 📊",
+            "Activo = Ventas - Gastos",
+            "Capital = IVA + Ventas",
+            "Pasivo = Activo + Gastos"
+        ],
+        correcta:0,
+        penitencia:"Me debes tres besitos contables 😘😘😘"
+    },
+
+    {
+        pregunta:"💰 Si una empresa recibe dinero en efectivo, ¿qué cuenta aumenta?",
+        opciones:[
+            "Caja 💵",
+            "Proveedores",
+            "Capital social",
+            "Gastos"
+        ],
+        correcta:0,
+        penitencia:"Me debes un beso de emergencia contable 💋🧮"
+    },
+
+    {
+        pregunta:"🧾 ¿Qué significa IVA?",
+        opciones:[
+            "Impuesto al Valor Agregado",
+            "Ingreso Variable Anual",
+            "Impuesto de Ventas Administrativas",
+            "Ingreso de Valor Agregado"
+        ],
+        correcta:0,
+        penitencia:"Me debes un abrazo de contadora 🫂📚"
+    },
+
+    {
+        pregunta:"📚 ¿Cuál de las siguientes cuentas representa un pasivo?",
+        opciones:[
+            "Proveedores / Cuentas por pagar",
+            "Caja 💰",
+            "Bancos 🏦",
+            "Mobiliario"
+        ],
+        correcta:0,
+        penitencia:"Me debes una noche apasionada de contabilidad 😏🔥❤️"
+    }
+
+];
+
+
+let indice=0;
+let esContabilidad=false;
+
+
+/* =====================================================
+   INICIAR JUEGO
+===================================================== */
+
+function iniciarJuego(){
+
+    indice=0;
+    esContabilidad=false;
+
+    mostrar("quiz");
+    cargarPregunta();
+}
+
+
+/* =====================================================
+   CARGAR PREGUNTA
+===================================================== */
+
+function cargarPregunta(){
+
+    const lista = esContabilidad
+        ? preguntasContabilidad
+        : preguntasNosotros;
+
+    const actual = lista[indice];
+
+    document.getElementById("numero").textContent = indice + 1;
+
+    document.getElementById("tipoPregunta").textContent =
+        esContabilidad
+        ? "Ahora sí, a ver lo contadora 😏📚"
+        : "Sobre nosotros ❤️🥰";
+
+    document.getElementById("pregunta").textContent =
+        actual.pregunta;
+
+    const opciones =
+        document.getElementById("opciones");
+
+    opciones.innerHTML="";
+
+    actual.opciones.forEach((opcion,i)=>{
+
+        const boton=document.createElement("button");
+
+        boton.className="opcion";
+
+        boton.innerHTML=opcion;
+
+        boton.onclick=()=>{
+            responder(i);
+        };
+
+        opciones.appendChild(boton);
+
+    });
+
+    document.getElementById("resultado").style.display="none";
+}
+
+
+/* =====================================================
+   RESPONDER
+===================================================== */
+
+function responder(eleccion){
+
+    const lista = esContabilidad
+        ? preguntasContabilidad
+        : preguntasNosotros;
+
+    const actual=lista[indice];
+
+    const resultado=document.getElementById("resultado");
+
+    resultado.style.display="block";
+
+    document
+        .querySelectorAll(".opcion")
+        .forEach(b=>b.disabled=true);
+
+    if(eleccion===actual.correcta){
+
+        resultado.innerHTML=`
+            <div class="correcto">
+                🎉 ¡EXCELENTE, TE AMO! ❤️🥰
+            </div>
+
+            <p>
+                Sabía que lo ibas a saber 😍💗
+            </p>
+
+            <button class="btn" onclick="siguientePregunta()">
+                Siguiente ➜ ❤️
+            </button>
+        `;
+
+        lluviaMini();
+
+    }else{
+
+        resultado.innerHTML=`
+            <div class="incorrecto">
+                😈 ¡JAJAJA PERDISTE! 😂❤️
+            </div>
+
+            <div class="penitencia">
+                ${actual.penitencia}
+            </div>
+
+            <button class="btn" onclick="siguientePregunta()">
+                Acepto mi penitencia 😭❤️
+            </button>
+        `;
+
+    }
+
+}
+
+
+/* =====================================================
+   SIGUIENTE PREGUNTA
+===================================================== */
+
+function siguientePregunta(){
+
+    const lista = esContabilidad
+        ? preguntasContabilidad
+        : preguntasNosotros;
+
+    indice++;
+
+    if(indice >= lista.length){
+
+        if(!esContabilidad){
+
+            mostrar("contadora");
+
+        }else{
+
+            mostrar("final");
+
+            lluviaCorazones();
+
+        }
+
+    }else{
+
+        cargarPregunta();
+
+    }
+
+}
+
+
+/* =====================================================
+   CONTABILIDAD
+===================================================== */
+
+function iniciarContabilidad(){
+
+    indice=0;
+    esContabilidad=true;
+
+    mostrar("quiz");
+
+    cargarPregunta();
+}
+
+
+/* =====================================================
+   LLUVIA DE CORAZONES
+===================================================== */
+
+function lluviaCorazones(){
+
+    const contenedor=document.getElementById("lluvia");
+
+    contenedor.innerHTML="";
+
+    const emojis=[
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💞",
+        "💘",
+        "😘",
+        "🥰",
+        "💋",
+        "👶",
+        "🐶"
+    ];
+
+    for(let i=0;i<80;i++){
+
+        const elemento=document.createElement("span");
+
+        elemento.textContent=
+            emojis[Math.floor(Math.random()*emojis.length)];
+
+        elemento.style.left=
+            Math.random()*100+"%";
+
+        elemento.style.fontSize=
+            (15+Math.random()*30)+"px";
+
+        elemento.style.animationDuration=
+            (3+Math.random()*4)+"s";
+
+        elemento.style.animationDelay=
+            Math.random()*2+"s";
+
+        contenedor.appendChild(elemento);
+
+    }
+
+    setTimeout(()=>{
+        contenedor.innerHTML="";
+    },8000);
+}
+
+
+/* =====================================================
+   MINI LLUVIA
+===================================================== */
+
+function lluviaMini(){
+
+    const emojis=["❤️","💕","✨","🥰","😘"];
+
+    for(let i=0;i<12;i++){
+
+        const elemento=document.createElement("div");
+
+        elemento.textContent=
+            emojis[Math.floor(Math.random()*emojis.length)];
+
+        elemento.style.position="fixed";
+        elemento.style.left=
+            (30+Math.random()*40)+"%";
+
+        elemento.style.top="50%";
+
+        elemento.style.fontSize="25px";
+
+        elemento.style.zIndex="200";
+
+        elemento.style.pointerEvents="none";
+
+        document.body.appendChild(elemento);
+
+        elemento.animate(
+            [
+                {
+                    transform:"translateY(0) scale(.5)",
+                    opacity:1
+                },
+                {
+                    transform:
+                    `translate(${(Math.random()-.5)*300}px,-250px) scale(1.5)`,
+                    opacity:0
+                }
+            ],
+            {
+                duration:1000,
+                easing:"ease-out"
+            }
+        );
+
+        setTimeout(()=>{
+            elemento.remove();
+        },1000);
+    }
+}
+
+</script>
+
+</body>
+</html>
